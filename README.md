@@ -146,7 +146,7 @@ This file outlines the potential weaknesses of using a centralized coordination 
 
 How to Run
 Clone the repository:
-git clone https://github.com/yourusername/MyProject.git
+git clone https://github.com/tkaragul/Integration.git
 cd MyProject
 
 Build the project:
