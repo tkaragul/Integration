@@ -1,0 +1,5 @@
+1. Tek Nokta Hatası: Redis gibi merkezi bir koordinasyon servisi kullanmak, tek bir hata noktasına neden olur. Redis'in kullanılamaz hale gelmesi durumunda, tüm öğe işleme mekanizması kesintiye uğrayabilir.
+
+2. Gecikme: Dağıtık sistemler doğası gereği ağ iletişimini içerir. Ağ üzerinden kilit alma ve bırakma işlemleri gecikmeye neden olabilir, bu da genel işleme sürelerini etkileyebilir.
+
+3. Karmaşıklık: Dağıtık kilitleme mekanizmalarının eklenmesi, sistemin karmaşıklığını artırır ve kilit alma, bırakma ve hata durumlarının dikkatlice ele alınmasını gerektirir. Bu ek karmaşıklık, sistemin bakımını ve hata ayıklamasını zorlaştırabilir.
