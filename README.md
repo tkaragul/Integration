@@ -68,13 +68,13 @@ namespace MyProject.Service
     }
 }
 
+```
 
-
-Backend Layer
-ItemRepository.cs
+## Backend Layer
+### ItemRepository.cs
 The ItemRepository class simulates the storage of items in a database and ensures that no duplicate items are saved.
 
-
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -101,10 +101,12 @@ namespace MyProject.Backend
     }
 }
 
-Main Program
-Program.cs
+```
+## Main Program
+### Program.cs
 The Program.cs file demonstrates the parallel processing and storage of items with different content.
 
+```csharp
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -131,10 +133,11 @@ namespace MyProject
     }
 }
 
-Distributed System Scenario
+```
+## Distributed System Scenario
 In a distributed scenario where multiple servers are running the ItemIntegrationService, a centralized coordination service such as Redis would be necessary to prevent duplicate processing of items.
 
-DistributedSolutionWeaknesses.txt
+## DistributedSolutionWeaknesses.txt
 This file outlines the potential weaknesses of using a centralized coordination service like Redis:
 
 1. Single Point of Failure: Using a centralized coordination service introduces a single point of failure. If Redis becomes unavailable, the entire item processing mechanism could be disrupted.
@@ -144,18 +147,18 @@ This file outlines the potential weaknesses of using a centralized coordination 
 3. Complexity: Implementing distributed locks adds complexity to the system, requiring additional components and configurations. This added complexity can make the system harder to maintain and debug.
 
 
-How to Run
+## How to Run
 Clone the repository:
 git clone https://github.com/tkaragul/Integration.git
 cd MyProject
 
-Build the project:
+## Build the project:
 dotnet build
 
-Run the project:
+## Run the project:
 dotnet run
 
-Conclusion
+## Conclusion
 This project demonstrates how to handle concurrent item processing and ensure that each item is processed and saved only once, even when multiple concurrent requests are made. The solution uses ConcurrentDictionary to manage the processing state and HashSet in the repository to ensure unique storage.
 
 
